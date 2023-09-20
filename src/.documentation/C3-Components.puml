@@ -1,0 +1,35 @@
+@startuml WebshopComponent
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+LAYOUT_WITH_LEGEND()
+
+title 3. Component diagram for Catalog container
+
+Container(spa, "SPA webshop ", "Container: VueJS", "Single page front end application")
+Container(gateway, "API Gateway", "Container: dotNET YARP", "Reverse proxy like YARP acting as BFF")
+
+Container_Boundary(catapi, "Catalog API"){
+    Component(application, "Application layer", "dotNET library", "Orchestration")
+    Component(domain, "Domain layer", "dotNET library", "Business logic")
+    Component(infrastructure, "Infrastructure layer", "dotNET library", "Persistance model and infra")
+    Component(presentation, "Presentation layer", "dotNET Web API", "Endpoints")    
+    }
+Container(orderapi, "Order API", "Container: dotNET Web API", "Order API, Domain driven design")
+Container(pubsub, "Messagesystem", "Container: Kafka", "Pub-sub system for eventual consistency")
+ContainerDb(catdb, "Catalog Database", "Container: MsSQL", "Catalog Database taken from eshopOnContainers")
+Container_Ext(logging, "SeriLog Logging", "Container: ....", "Central logging system for storing and querying logs")
+
+Rel(spa, gateway, "Makes API calls", "HTTPS/JSON")
+Rel(gateway, presentation, "Makes API calls", "HTTPS/JSON")
+Rel(presentation, application, "calls", "C#")
+Rel(application, domain, "logic orchestration", "C#")
+Rel(application, infrastructure, "persistance orchestration", "C#")
+Rel(infrastructure, logging, "logs data")
+Rel(application, logging, "logs data")
+Rel(infrastructure, catdb, "Read and write", "ODBC")
+
+Rel(spa, gateway, "uses")
+
+Rel(application, pubsub, "publish subscribe")
+Rel(orderapi, pubsub, "publish subscribe")
+
+@enduml

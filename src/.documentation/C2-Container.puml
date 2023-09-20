@@ -1,0 +1,47 @@
+@startuml WebshopContainer
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
+LAYOUT_WITH_LEGEND()
+
+title 2. Container diagram for Webshop demo
+
+Person(visitor, "Visitor", "Visiting the website")
+Person(customer, "Customer", "Registered customer")
+
+System_Boundary(webshopsys, "WebshopDemo"){
+    Container(spa, "SPA webshop ", "Container: VueJS", "Single page front end application")
+    Container(gateway, "API Gateway", "Container: dotNET YARP", "Reverse proxy like YARP acting as BFF")
+    Container(catapi, "Catalog API", "Container: dotNET Web API", "Catalog API, simple Data-driven CRUD")
+    Container(orderapi, "Order API", "Container: dotNET Web API", "Order API, Domain driven design")
+    Container(pubsub, "Messagesystem", "Container: Kafka", "Pub-sub system for eventual consistency")
+    ContainerDb(catdb, "Catalog Database", "Container: MsSQL", "Catalog Database taken from eshopOnContainers")
+    ContainerDb(orderdb, "Order Database", "Container: MsSQL", "Order Database taken from eshopOnContainers")
+    Container_Ext(logging, "SeriLog Logging", "Container: ....", "Central logging system for storing and querying logs")
+}
+
+System_Ext(payment, "Payment", "Some account service")
+System_Ext(account, "Account", "Some account service")
+System_Ext(shipping, "Shipping", "Some shipping service")
+
+
+
+Rel(visitor, spa, "visits, views products")
+Rel(customer, spa, "visits, views products, orders, places orders, maintains wishlist")
+Rel(customer, account, "authenticates")
+Rel(spa, gateway, "uses")
+
+Rel(gateway, account, "authentication and authorization")
+Rel(gateway, payment, "redirects")
+Rel(gateway, shipping, "redirects")
+Rel(gateway, catapi, "redirects")
+Rel(gateway, orderapi, "redirects")
+Rel(catapi, catdb, "stores and retrieves products")
+Rel(orderapi, orderdb, "stores and retrieves orders")
+
+Rel(catapi, pubsub, "publish subscribe")
+Rel(orderapi, pubsub, "publish subscribe")
+
+'Rel(gateway, logging, "logs data")
+
+
+
+@enduml

@@ -1,0 +1,26 @@
+@startuml Example event storming
+!include styles.puml
+
+title Example components for Event Storming
+
+ContextBoundary(CTX, "Description context boundary") {
+    Command(C, "Command", "Some command")
+    DomainEvent(DE, "Domain event", "Some domain event")
+    Policy(PO, "Policy", "Some policy")
+    Actor(A, "Actor", "Some actor")
+    Aggregate(AG, "Aggregate", "Some aggregate")
+    ReadModel(RM, "Read model", "Some read model")
+    ExternalSystem(ES, "External system", "Some external system")
+}
+
+ContextBoundary(CTX2, "Without description context boundary") {
+    Command(C2, "Command")
+    DomainEvent(DE2, "Domain event")
+    Policy(PO2, "Policy")
+    Actor(A2, "Actor")
+    Aggregate(AG2, "Aggregate")
+    ReadModel(RM2, "Read model")
+    ExternalSystem(ES2, "External system")
+}
+
+@enduml
