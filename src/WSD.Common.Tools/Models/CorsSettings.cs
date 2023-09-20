@@ -15,6 +15,6 @@
         /// <summary>
         /// Allowed CORS Methods
         /// </summary>
-        public string[] AllowedMethods { get; }
+        public string[] AllowedMethods { get; set; }
     }
 }

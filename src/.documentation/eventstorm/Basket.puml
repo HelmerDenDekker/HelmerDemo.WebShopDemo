@@ -1,0 +1,34 @@
+@startuml Example event storming
+!include styles.puml
+
+title Example components for Event Storming
+
+ContextBoundary(CTX, "Add item to Basket, in stock") {
+    Command(addItem, "Add item to basket", "-")
+    DomainEvent(addedToBasket, "Items added to basket", "-")
+    Policy(itemInStock, "Item in stock", "whenever an item is in stock")
+    Policy(itemNotInStock, "Item not in stock", "whenever an item is not in stock")
+    DomainEvent(updatedBasket, "Basket updated", "-")
+    DomainEvent(alertSet, "Alert set", "set an alert")
+    Policy(sendNotification, "Send a notification", "wenever an item comes in stock, send a notification to customer")
+    DomainEvent(sentNote, "Notification sent", "notification sent")
+    Actor(customer, "Customer", "-")
+    'Aggregate(AG, "Aggregate", "Some aggregate")
+    'ReadModel(RM, "Read model", "Some read model")
+    'ExternalSystem(ES, "External system", "Some external system")
+    addItem -> addedToBasket
+    addedToBasket -> itemInStock
+    addedToBasket -> itemNotInStock
+    itemInStock -> updatedBasket
+    itemNotInStock -> alertSet
+    alertSet -> sendNotification
+    sendNotification -> sentNote
+}
+
+
+
+
+
+
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml WebshopContext
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
+LAYOUT_WITH_LEGEND()
+
+title 1. System Context diagram for Webshop demo
+
+Person(visitor, "Visitor", "Visiting the website")
+Person(customer, "Customer", "Registered customer")
+
+System(webshop, "WebshopDemo", "The webshop application system")
+
+System_Ext(payment, "Payment", "Some account service")
+System_Ext(account, "Account", "Some account service")
+System_Ext(shipping, "Shipping", "Some shipping service")
+
+Rel(visitor, webshop, "visits, views products")
+Rel(customer, account, "Authenticates to")
+Rel(webshop, account, "authentication and authorization")
+Rel(webshop, payment, "handles order payment")
+Rel(webshop, shipping, "handles order shipping")
+Rel(customer, webshop, "visits, views products, orders, places orders, maintains wishlist")
+
+@enduml

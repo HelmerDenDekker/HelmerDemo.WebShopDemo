@@ -15,28 +15,43 @@ Forces:
 - Use dotNET technology
 
 ## Status
-Accepted
+Under revision
 
 ## Decision 
 
-Implement the webshop in dotNET with domain driven design as thought in the software architecture course by vijfhart.
-Have three layers as described by Microsoft:
-- Application, containing Presentation (API) and Service layers
-- Domain, containing the domain model
-- Infrastructure, containing Data access and integration
+Implement a stream-based architecture as presented in the software architecture course by vijfhart.
 
-![Layers](/images/0001-layers.png "Layers")
-
-The three layers will be loosely coupled using interfaces.
 
 ## Rationale 
 
-The idea is to use a webshop-domain to learn - and have a showcase for domain driven design.
+The idea is to use a webshop-domain to learn - and have a showcase for a stream based architecture.
 dotNET is used as a techstack, because I as a programmer have the most experience with dotNET and C# applications.
 The cost of initial development time is not an issue.
 
+It is loosely based on [eShopOnContainers by microsoft](https://learn.microsoft.com/en-us/dotnet/architecture/cloud-native/introduce-eshoponcontainers-reference-app)
+
+### CatalogService
+
+Simple Data driven and CRUD microservice
+
+### OrderService
+
+Domain driven design showcase
+
+### API Gateway
+
+For now: YARP as BFF, because I know this technology. But I am not happy:
+It acts as BFF which:
+- is a security pro, sessions are managed by the server and user data is secure
+- is a scalability issue, because I have tight coupling with users session and I need a session for each user on my server
+
+Both of these qualities are not mentioned in my "desired qualities". so for now, I will go ahead with this techstack.
+
+
 
 ## Consequences
+
+For DDD:
 
 ### Advantages
 
