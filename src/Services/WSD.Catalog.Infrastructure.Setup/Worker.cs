@@ -19,7 +19,7 @@ namespace WSD.Catalog.Infrastructure.Setup
         {
             Console.WriteLine("Start migration process.");
             using var scope = _serviceProvider.CreateScope();
-
+            
             var dbContext = scope.ServiceProvider.GetRequiredService<CatalogDbContext>();
 
             if (dbContext.Database.GetPendingMigrations().Any())

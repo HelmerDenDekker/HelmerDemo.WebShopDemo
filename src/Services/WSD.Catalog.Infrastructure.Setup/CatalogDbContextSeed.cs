@@ -2,6 +2,7 @@
 using Polly;
 using Polly.Retry;
 using System.IO.Compression;
+using System.Reflection;
 using WSD.Catalog.Infrastructure.Models;
 
 namespace WSD.Catalog.Infrastructure.Setup
@@ -10,6 +11,7 @@ namespace WSD.Catalog.Infrastructure.Setup
     {
         public async Task SeedAsync(CatalogDbContext context)
         {
+
             var policy = CreatePolicy(nameof(CatalogDbContextSeed));
 
             await policy.ExecuteAsync(async () =>
@@ -340,7 +342,8 @@ namespace WSD.Catalog.Infrastructure.Setup
         private void GetCatalogItemPictures()
         {
             var currentDir = Directory.GetCurrentDirectory();
-            var picturePath = Path.Combine(currentDir, "Pics");
+            var rootDir = currentDir.Split("bin").First();
+            var picturePath = Path.Combine(rootDir, "Pics");
             if (picturePath != null)
             {
                 DirectoryInfo directory = new DirectoryInfo(picturePath);
@@ -349,7 +352,7 @@ namespace WSD.Catalog.Infrastructure.Setup
                     file.Delete();
                 }
 
-                string zipFileCatalogItemPictures = Path.Combine(currentDir, "Content", "CatalogItems.zip");
+                string zipFileCatalogItemPictures = Path.Combine(rootDir, "Content", "CatalogItems.zip");
                 ZipFile.ExtractToDirectory(zipFileCatalogItemPictures, picturePath);
             }
         }
