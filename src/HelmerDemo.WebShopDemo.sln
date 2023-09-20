@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.ApiGateway.App", "ApiGateway\WSD.ApiGateway.App\WSD.ApiGateway.App.csproj", "{CEFB05F2-D7EE-4574-B4DD-C71A77109FD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.ApiGateway.App", "ApiGateway\WSD.ApiGateway.App\WSD.ApiGateway.App.csproj", "{CEFB05F2-D7EE-4574-B4DD-C71A77109FD9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{44353A48-410E-48D5-9A5B-0D63710FF2B2}"
 	ProjectSection(SolutionItems) = preProject
@@ -16,23 +16,25 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WSD.ApiGateway", "WSD.ApiGa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WSD.Services", "WSD.Services", "{F83509F2-C50C-4B65-927E-C363D494164F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.Catalog.Presentation", "Services\WSD.Catalog.Presentation\WSD.Catalog.Presentation.csproj", "{3DD51B61-C655-43E3-8C53-1C9B968A4877}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Catalog.Presentation", "Services\WSD.Catalog.Presentation\WSD.Catalog.Presentation.csproj", "{3DD51B61-C655-43E3-8C53-1C9B968A4877}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.Catalog.Infrastructure", "Services\WSD.Catalog.Infrastructure\WSD.Catalog.Infrastructure.csproj", "{3F48B745-804A-4C8E-A7F7-AB32C4F2DDC2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Catalog.Infrastructure", "Services\WSD.Catalog.Infrastructure\WSD.Catalog.Infrastructure.csproj", "{3F48B745-804A-4C8E-A7F7-AB32C4F2DDC2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.Catalog.Domain", "Services\WSD.Catalog.Domain\WSD.Catalog.Domain.csproj", "{DA8E7F49-946F-457F-935C-D35472266470}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Catalog.Domain", "Services\WSD.Catalog.Domain\WSD.Catalog.Domain.csproj", "{DA8E7F49-946F-457F-935C-D35472266470}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.Catalog.Application", "Services\WSD.Catalog.Application\WSD.Catalog.Application.csproj", "{64A695FE-6F5F-4D9D-BC32-3EE1CF1B152A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Catalog.Application", "Services\WSD.Catalog.Application\WSD.Catalog.Application.csproj", "{64A695FE-6F5F-4D9D-BC32-3EE1CF1B152A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{5EFB4718-03AF-4A84-B908-BD554FBB247F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WSD.Common", "WSD.Common", "{67C125C9-816C-4FAB-98B9-466DC9FD4397}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.Common", "WSD.Common\WSD.Common.csproj", "{8C4F938B-6C74-4BCC-BB60-E465E971DB84}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Common", "WSD.Common\WSD.Common.csproj", "{8C4F938B-6C74-4BCC-BB60-E465E971DB84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.Common.Tools", "WSD.Common.Tools\WSD.Common.Tools.csproj", "{B854FCA2-9519-4E94-87E3-419EB77BE3A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Common.Tools", "WSD.Common.Tools\WSD.Common.Tools.csproj", "{B854FCA2-9519-4E94-87E3-419EB77BE3A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.Catalog.Infrastructure.Setup", "Services\WSD.Catalog.Infrastructure.Setup\WSD.Catalog.Infrastructure.Setup.csproj", "{77F4449D-1DCC-4288-B048-205BC9005CB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Catalog.Infrastructure.Setup", "Services\WSD.Catalog.Infrastructure.Setup\WSD.Catalog.Infrastructure.Setup.csproj", "{77F4449D-1DCC-4288-B048-205BC9005CB8}"
+EndProject
+Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "WSD.SpaWebApp", "WebApp\WSD.SpaWebApp\WSD.SpaWebApp.njsproj", "{91234B64-358E-43AC-BE3B-204DC502F595}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -72,6 +74,10 @@ Global
 		{77F4449D-1DCC-4288-B048-205BC9005CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77F4449D-1DCC-4288-B048-205BC9005CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77F4449D-1DCC-4288-B048-205BC9005CB8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{91234B64-358E-43AC-BE3B-204DC502F595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91234B64-358E-43AC-BE3B-204DC502F595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91234B64-358E-43AC-BE3B-204DC502F595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{91234B64-358E-43AC-BE3B-204DC502F595}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
