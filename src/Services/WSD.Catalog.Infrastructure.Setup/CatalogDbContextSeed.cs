@@ -2,7 +2,6 @@
 using Polly;
 using Polly.Retry;
 using System.IO.Compression;
-using System.Reflection;
 using WSD.Catalog.Infrastructure.Models;
 
 namespace WSD.Catalog.Infrastructure.Setup

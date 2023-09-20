@@ -1,7 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System.Reflection;
 using WSD.Catalog.Infrastructure;
 using WSD.Catalog.Infrastructure.Setup;
 using WSD.Common.Tools.Extensions;
