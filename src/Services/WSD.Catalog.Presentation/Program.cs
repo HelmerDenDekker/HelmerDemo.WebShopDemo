@@ -101,3 +101,8 @@ static bool IsDevelopment()
 
     return !string.IsNullOrEmpty(aspEnvironment) && aspEnvironment.ToLowerInvariant().Equals("development");
 }
+
+/// <summary>
+/// Added for webApplicationFactory
+/// </summary>
+public partial class Program { }
