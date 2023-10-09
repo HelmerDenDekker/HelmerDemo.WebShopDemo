@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\WSD.Common\WSD.Common.csproj" />
+  </ItemGroup>
+
 </Project>

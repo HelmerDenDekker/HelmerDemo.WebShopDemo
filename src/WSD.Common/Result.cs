@@ -33,7 +33,7 @@ namespace WSD.Common
         /// <summary>
         /// Gets or sets the messages for explaining the result, please use the resx
         /// </summary>
-        public IEnumerable<string> Messages { get; private set; }
+        public ICollection<string> Messages { get; private set; }
 
         /// <summary>
         /// Gets or sets a statuscode defining the Result
@@ -57,9 +57,9 @@ namespace WSD.Common
         public static Result NoContent => new(new List<string> { "The request has been successfully processed" }, HttpStatusCode.NoContent);
 
         /// <summary>
-        /// Request failed, the request cannot be processeed by the code. Equivalent to 409 conflict
+        /// Request failed, the request cannot be processed by the code. Equivalent to 409 conflict
         /// </summary>
-        public static Result Conflict => new(new List<string> { "The request cannot be processeed by the code due to a conflict" }, HttpStatusCode.Conflict);
+        public static Result Conflict => new(new List<string> { "The request cannot be processed by the code due to a conflict" }, HttpStatusCode.Conflict);
 
         /// <summary>
         /// Request failed, the request cannot be processed by the code. Equivalent to 400 Bad Request.
