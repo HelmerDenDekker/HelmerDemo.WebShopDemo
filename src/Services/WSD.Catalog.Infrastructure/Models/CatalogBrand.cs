@@ -1,9 +1,8 @@
 ﻿namespace WSD.Catalog.Infrastructure.Models
 {
-    public class CatalogBrand
+    public class CatalogBrand : Domain.Models.CatalogBrand, IBaseEntity
     {
+        /// <inheritdoc />
         public int Id { get; set; }
-
-        public string Brand { get; set; }
     }
 }

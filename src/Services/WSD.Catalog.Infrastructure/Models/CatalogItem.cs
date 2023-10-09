@@ -1,40 +1,28 @@
 ﻿namespace WSD.Catalog.Infrastructure.Models
 {
-    public class CatalogItem
+    public class CatalogItem : Domain.Models.CatalogItem, IBaseEntity
     {
+        /// <inheritdoc />
         public int Id { get; set; }
 
-        public string Name { get; set; }
-
-        public string Description { get; set; }
-
-        public decimal Price { get; set; }
-
-        public string PictureFileName { get; set; }
-
-        public string PictureUri { get; set; }
-
+        /// <summary>
+        /// Primary key for Catalog Type
+        /// </summary>
         public int CatalogTypeId { get; set; }
-
+        
+        /// <summary>
+        /// Navigational property to <see cref="CatalogType"/>
+        /// </summary>
         public CatalogType CatalogType { get; set; }
 
+        /// <summary>
+        /// Primary key for Catalog Brand
+        /// </summary>
         public int CatalogBrandId { get; set; }
 
-        public CatalogBrand CatalogBrand { get; set; }
-
-        // Quantity in stock
-        public int AvailableStock { get; set; }
-
-        // Available stock at which we should reorder
-        public int RestockThreshold { get; set; }
-
-
-        // Maximum number of units that can be in-stock at any time (due to physicial/logistical constraints in warehouses)
-        public int MaxStockThreshold { get; set; }
-
         /// <summary>
-        /// True if item is on reorder
+        /// Navigational property for <see cref="CatalogBrand"/>
         /// </summary>
-        public bool OnReorder { get; set; }
+        public CatalogBrand CatalogBrand { get; set; }
     }
 }
