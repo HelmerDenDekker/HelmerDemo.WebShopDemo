@@ -21,11 +21,11 @@ public class CatalogControllerIntegrationTests
         
         // --assert-- 
         
-        // assert VS TestTools
+        // assert classic style
         Assert.IsTrue(response.IsSuccessStatusCode);
         Assert.AreEqual(HttpStatusCode.OK, response.StatusCode);
         
-        // assert Fluent Assertions
+        // assert Fluent Assertions style
         response.StatusCode.Should().Be(HttpStatusCode.OK);
     }
 }

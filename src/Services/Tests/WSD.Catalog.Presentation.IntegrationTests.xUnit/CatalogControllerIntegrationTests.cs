@@ -19,6 +19,7 @@ public class CatalogControllerIntegrationTests
         
         // --assert-- 
         
+        // Fluent assertions style
         response.StatusCode.Should().Be(HttpStatusCode.OK);
     }
 }

@@ -9,11 +9,6 @@ namespace WSD.Catalog.Presentation.IntegrationTests.nUnit;
 [TestFixture]
 public class CatalogControllerIntegrationTests
 {
-    [SetUp]
-    public void Setup()
-    {
-    }
-
     [Test]
     public async Task Get_Request_ShouldReturnVersionString()
     {
