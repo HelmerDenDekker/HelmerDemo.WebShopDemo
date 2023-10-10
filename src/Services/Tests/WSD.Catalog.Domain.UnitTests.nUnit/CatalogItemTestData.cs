@@ -11,7 +11,8 @@ public static class CatalogItemTestData
             yield return new TestCaseData(200, 7);
             yield return new TestCaseData(100, 1);
             yield return new TestCaseData(2, 1);
-            yield return new TestCaseData(1, 1);
+            yield return new TestCaseData(1, 1
+                );
         }
     }
 }
