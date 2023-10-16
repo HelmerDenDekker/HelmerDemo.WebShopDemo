@@ -34,8 +34,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Common.Tools", "WSD.Com
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Catalog.Infrastructure.Setup", "Services\WSD.Catalog.Infrastructure.Setup\WSD.Catalog.Infrastructure.Setup.csproj", "{77F4449D-1DCC-4288-B048-205BC9005CB8}"
 EndProject
-Project("{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}") = "WSD.SpaWebApp", "WebApp\WSD.SpaWebApp\WSD.SpaWebApp.njsproj", "{91234B64-358E-43AC-BE3B-204DC502F595}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.Catalog.Presentation.IntegrationTests.xUnit", "Services\Tests\WSD.Catalog.Presentation.IntegrationTests.xUnit\WSD.Catalog.Presentation.IntegrationTests.xUnit.csproj", "{96F4A962-727A-42AD-8D08-3ADBDACF2BEA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.Catalog.Presentation.IntegrationTests.nUnit", "Services\Tests\WSD.Catalog.Presentation.IntegrationTests.nUnit\WSD.Catalog.Presentation.IntegrationTests.nUnit.csproj", "{6DC24433-498E-49B6-8B6B-C23EA3B383AE}"
@@ -84,10 +82,6 @@ Global
 		{77F4449D-1DCC-4288-B048-205BC9005CB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77F4449D-1DCC-4288-B048-205BC9005CB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77F4449D-1DCC-4288-B048-205BC9005CB8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{91234B64-358E-43AC-BE3B-204DC502F595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{91234B64-358E-43AC-BE3B-204DC502F595}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{91234B64-358E-43AC-BE3B-204DC502F595}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{91234B64-358E-43AC-BE3B-204DC502F595}.Release|Any CPU.Build.0 = Release|Any CPU
 		{96F4A962-727A-42AD-8D08-3ADBDACF2BEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{96F4A962-727A-42AD-8D08-3ADBDACF2BEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96F4A962-727A-42AD-8D08-3ADBDACF2BEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
