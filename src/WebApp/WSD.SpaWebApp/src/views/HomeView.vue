@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import TheWelcome from '../components/TheWelcome.vue'
+import PaymentMethods from "@/components/PaymentMethods.vue";
 </script>
 
 <template>
   <main>
-    <TheWelcome />
+    <PaymentMethods />
   </main>
 </template>
