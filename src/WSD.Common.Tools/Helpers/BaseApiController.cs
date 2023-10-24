@@ -6,7 +6,7 @@ namespace WSD.Common.Tools.Helpers
     [SecurityHeaders]
     [ApiController]
     [Route("v{v:apiVersion}/[controller]")]
-    public class BaseApiController
+    public class BaseApiController : ControllerBase
     {
         /// <summary>
         /// A default ActionResponse for returning a generic response as returned by the result

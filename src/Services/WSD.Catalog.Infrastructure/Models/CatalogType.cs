@@ -1,9 +1,8 @@
 ﻿namespace WSD.Catalog.Infrastructure.Models
 {
-    public class CatalogType
+    public class CatalogType : Domain.Models.CatalogType, IBaseEntity
     {
+        /// <inheritdoc />
         public int Id { get; set; }
-
-        public string Type { get; set; }
     }
 }

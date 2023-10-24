@@ -1,7 +1,6 @@
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using Microsoft.AspNetCore.Mvc.Versioning.Conventions;
-using Microsoft.AspNetCore.Mvc.Versioning;
-using Microsoft.AspNetCore.Mvc;
+using Asp.Versioning;
+using Asp.Versioning.ApiExplorer;
+using Asp.Versioning.Conventions;
 using WSD.Common.Tools.Helpers;
 using WSD.Common.Tools.Middleware;
 using WSD.Common.Tools.Models;
@@ -34,19 +33,23 @@ static void AddServices(WebApplicationBuilder builder)
 
     // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 
-    builder.Services.AddApiVersioning(options =>
-    {
-        options.DefaultApiVersion = new ApiVersion(1, 0);
-        options.AssumeDefaultVersionWhenUnspecified = true;
-        options.ApiVersionReader = new UrlSegmentApiVersionReader();
-        options.Conventions.Add(new VersionByNamespaceConvention());
-    });
-    // Add ApiExplorer to discover versions
-    builder.Services.AddVersionedApiExplorer(setup =>
-    {
-        setup.GroupNameFormat = "'v'VVV";
-        setup.SubstituteApiVersionInUrl = true;
-    });
+	builder.Services.AddApiVersioning(options =>
+		{
+			options.DefaultApiVersion = new ApiVersion(1, 0);
+			options.AssumeDefaultVersionWhenUnspecified = true;
+			options.ApiVersionReader = new UrlSegmentApiVersionReader();
+		})
+		.AddMvc(options =>
+			{
+				options.Conventions.Add(new VersionByNamespaceConvention());
+			}
+		)
+		.AddApiExplorer(setup =>
+		{
+			setup.GroupNameFormat = "'v'VVV";
+			setup.SubstituteApiVersionInUrl = true;
+		});
+
 
     builder.Services.AddEndpointsApiExplorer();
     builder.Services.AddSwaggerGen();
@@ -85,6 +88,8 @@ static void ConfigureRequestPipeline(WebApplication app)
             }
         });
     }
+    
+    app.UseMiddleware<ApiSecurityMiddleware>();
 
     app.UseHttpsRedirection();
 
@@ -101,3 +106,8 @@ static bool IsDevelopment()
 
     return !string.IsNullOrEmpty(aspEnvironment) && aspEnvironment.ToLowerInvariant().Equals("development");
 }
+
+/// <summary>
+/// Added for webApplicationFactory
+/// </summary>
+public partial class Program { }

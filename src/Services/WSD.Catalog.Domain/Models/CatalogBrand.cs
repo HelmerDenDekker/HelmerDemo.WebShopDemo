@@ -2,8 +2,9 @@
 {
     public class CatalogBrand
     {
-        public int Id { get; set; }
-
+        /// <summary>
+        /// Brand
+        /// </summary>
         public string Brand { get; set; }
     }
 }
