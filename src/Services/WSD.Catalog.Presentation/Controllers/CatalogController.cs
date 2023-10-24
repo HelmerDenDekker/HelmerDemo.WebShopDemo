@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Asp.Versioning;
+using Microsoft.AspNetCore.Mvc;
 using WSD.Common.Tools.Helpers;
 
 namespace WSD.Catalog.Presentation.Controllers
