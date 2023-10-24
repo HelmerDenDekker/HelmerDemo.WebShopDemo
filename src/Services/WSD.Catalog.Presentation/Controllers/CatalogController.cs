@@ -10,6 +10,8 @@ namespace WSD.Catalog.Presentation.Controllers
         [HttpGet]
         //[MapToApiVersion("1.0")]
         public string Get() => ".Net Core Web API Version 1";
+        
+        
     }
 
 }
