@@ -3,7 +3,7 @@
 I want to learn about domain-driven design and have a show-case project.
 
 The desired qualities are:
-- Maintainability: Testable, understable and modifiable
+- Maintainability: Testable, understandable and modifiable
 - Modifiability: The cost of introducing change should be as low as possible
 - Testability: Being able to do systematic testing
 
@@ -32,7 +32,7 @@ The three layers will be loosely coupled using interfaces.
 ## Rationale 
 
 The idea is to use a webshop-domain to learn - and have a showcase for domain driven design.
-dotNET is used as a techstack, because I as a programmer have the most experience with dotNET and C# applications.
+dotNET is used as a tech stack, because I as a programmer have the most experience with dotNET and C# applications.
 The cost of initial development time is not an issue.
 
 

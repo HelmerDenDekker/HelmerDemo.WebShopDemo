@@ -1,9 +1,9 @@
 ﻿# Setup project
-This is an idea, I want the steup of the databse to be separate from the API and all.
+This is an idea, I want the setup of the database to be separate from the API and all.
 
 (c) By Patrick Keller and Helmer den Dekker
 
-I took an example from the eShopOnContainers by microsoft, and cut a lot of cases, we might add the later
+I took an example from the eShopOnContainers by microsoft, and cut a lot of cases. It is under development and used for showcasing.
 
 ## Setup
 

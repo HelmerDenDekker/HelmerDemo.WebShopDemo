@@ -14,6 +14,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WSD.ApiGateway", "WSD.ApiGateway", "{43B64FC7-FA17-4618-BD69-1B823E9BF5BC}"
+	ProjectSection(SolutionItems) = preProject
+		Directory.Packages.props = Directory.Packages.props
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WSD.Services", "WSD.Services", "{F83509F2-C50C-4B65-927E-C363D494164F}"
 EndProject

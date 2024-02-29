@@ -6,7 +6,7 @@ namespace WSD.Catalog.Domain.UnitTests.nUnit;
 
 public class CatalogItemLogicTests
 {
-    private CatalogItemLogic _catalogItemLogic;
+    private CatalogItemLogic _catalogItemLogic = new();
 
     [OneTimeSetUp]
     public void Initialize()

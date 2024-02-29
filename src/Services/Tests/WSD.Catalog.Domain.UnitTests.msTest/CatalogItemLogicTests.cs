@@ -6,7 +6,7 @@ namespace WSD.Catalog.Domain.UnitTests.msTest;
 [TestClass]
 public class CatalogItemLogicTests
 {
-    private CatalogItemLogic _catalogItemLogic;
+    private CatalogItemLogic _catalogItemLogic = new();
 
     [TestInitialize]
     public void Initialize()
