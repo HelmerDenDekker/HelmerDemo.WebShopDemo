@@ -7,7 +7,6 @@
   <ItemGroup>
     <PackageReference 
         Include="SonarAnalyzer.CSharp"
-        Version="9.10.0.77988"
         PrivateAssets="all"
         Condition="$(MSBuildProjectExtension) == '.csproj'"
      />

@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		.dockerignore = .dockerignore
 		..\.gitignore = ..\.gitignore
 		Directory.Build.props = Directory.Build.props
+		Directory.Packages.props = Directory.Packages.props
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WSD.ApiGateway", "WSD.ApiGateway", "{43B64FC7-FA17-4618-BD69-1B823E9BF5BC}"
@@ -34,15 +35,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Common.Tools", "WSD.Com
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Catalog.Infrastructure.Setup", "Services\WSD.Catalog.Infrastructure.Setup\WSD.Catalog.Infrastructure.Setup.csproj", "{77F4449D-1DCC-4288-B048-205BC9005CB8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.Catalog.Presentation.IntegrationTests.xUnit", "Services\Tests\WSD.Catalog.Presentation.IntegrationTests.xUnit\WSD.Catalog.Presentation.IntegrationTests.xUnit.csproj", "{96F4A962-727A-42AD-8D08-3ADBDACF2BEA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Catalog.Presentation.IntegrationTests.xUnit", "Services\Tests\WSD.Catalog.Presentation.IntegrationTests.xUnit\WSD.Catalog.Presentation.IntegrationTests.xUnit.csproj", "{96F4A962-727A-42AD-8D08-3ADBDACF2BEA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.Catalog.Presentation.IntegrationTests.nUnit", "Services\Tests\WSD.Catalog.Presentation.IntegrationTests.nUnit\WSD.Catalog.Presentation.IntegrationTests.nUnit.csproj", "{6DC24433-498E-49B6-8B6B-C23EA3B383AE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Catalog.Presentation.IntegrationTests.nUnit", "Services\Tests\WSD.Catalog.Presentation.IntegrationTests.nUnit\WSD.Catalog.Presentation.IntegrationTests.nUnit.csproj", "{6DC24433-498E-49B6-8B6B-C23EA3B383AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.Catalog.Presentation.IntegrationTests.msTest", "Services\Tests\WSD.Catalog.Presentation.IntegrationTests.msTest\WSD.Catalog.Presentation.IntegrationTests.msTest.csproj", "{4975F8AB-16D8-45EA-885D-E12FF4C19560}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Catalog.Presentation.IntegrationTests.msTest", "Services\Tests\WSD.Catalog.Presentation.IntegrationTests.msTest\WSD.Catalog.Presentation.IntegrationTests.msTest.csproj", "{4975F8AB-16D8-45EA-885D-E12FF4C19560}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.Catalog.Domain.UnitTests.msTest", "Services\Tests\WSD.Catalog.Domain.UnitTests.msTest\WSD.Catalog.Domain.UnitTests.msTest.csproj", "{BF649937-50E9-4070-BBB2-588C5CC7286F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Catalog.Domain.UnitTests.msTest", "Services\Tests\WSD.Catalog.Domain.UnitTests.msTest\WSD.Catalog.Domain.UnitTests.msTest.csproj", "{BF649937-50E9-4070-BBB2-588C5CC7286F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WSD.Catalog.Domain.UnitTests.nUnit", "Services\Tests\WSD.Catalog.Domain.UnitTests.nUnit\WSD.Catalog.Domain.UnitTests.nUnit.csproj", "{246CC7EB-E891-43E6-9035-437C2FFAD332}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WSD.Catalog.Domain.UnitTests.nUnit", "Services\Tests\WSD.Catalog.Domain.UnitTests.nUnit\WSD.Catalog.Domain.UnitTests.nUnit.csproj", "{246CC7EB-E891-43E6-9035-437C2FFAD332}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
